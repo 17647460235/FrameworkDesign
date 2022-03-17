@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace FrameworkDesign.Example
@@ -12,7 +11,7 @@ namespace FrameworkDesign.Example
             transform.Find("BtnGameStart").GetComponent<Button>().onClick.AddListener((() =>
             {
                 gameObject.SetActive(false);
-                GameStartEvent.Trigger();
+                new GameStartCommand().Execute();
             }));
         }
     }

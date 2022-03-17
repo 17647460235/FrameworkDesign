@@ -9,7 +9,8 @@ namespace CounterApp
     {
         private void Start()
         {
-            CountModel.Count.OnValueChange += OnValueChanged;
+            CountModel.Instance.Count.OnValueChange += OnValueChanged;
+            
             transform.Find("BtnAdd").GetComponent<Button>()
                 .onClick.AddListener((() => { new AddCountCommand().Execute(); }));
             transform.Find("BtnSub").GetComponent<Button>()
@@ -22,9 +23,10 @@ namespace CounterApp
         }
     }
 
-    public static class CountModel
+    public  class CountModel : Singleton<CountModel>
     {
-        public static BindableProperty<int> Count = new BindableProperty<int>()
+        private  CountModel(){}
+        public  BindableProperty<int> Count = new BindableProperty<int>()
         {
             Value = 0
         };

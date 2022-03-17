@@ -9,7 +9,7 @@ namespace FrameworkDesign.Example
         private void OnMouseDown()
         {
             Destroy(gameObject);
-            GameModel.KillCount.Value++;
+            new KillEnemyCommand().Execute();
         }
     }
 }

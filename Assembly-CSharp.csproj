@@ -65,6 +65,9 @@
      <Compile Include="Assets\CounterApp\Script\SubCountCommand.cs" />
      <Compile Include="Assets\FrameworkDesign\Example\Scripts\Game\Game.cs" />
      <Compile Include="Assets\FrameworkDesign\Example\Scripts\Game\Enemy.cs" />
+     <Compile Include="Assets\FrameworkDesign\Example\Scripts\Command\KillEnemyCommand.cs" />
+     <Compile Include="Assets\FrameworkDesign\Example\Scripts\Command\GameStartCommand.cs" />
+     <Compile Include="Assets\FrameworkDesign\Framework\Singleton\Singleton.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Program Files/2020.3.11f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

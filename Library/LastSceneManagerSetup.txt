@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/FrameworkDesign/Example/Game.unity
+- path: Assets/CounterApp/CountApp.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

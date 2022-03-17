@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace FrameworkDesign.Example
 {
@@ -8,21 +7,12 @@ namespace FrameworkDesign.Example
         private void Awake()
         {
             GameStartEvent.Register(OnGameStart);
-            GameModel.KillCount.OnValueChange += OnEnemyKilled;
         }
 
-        private void OnEnemyKilled(int killCount)
-        {
-            if (killCount == 4)
-            {
-                GamePassEvent.Trigger();
-            }
-        }
 
         private void OnDestroy()
         {
             GameStartEvent.Unregister(OnGameStart);
-            
         }
 
         private void OnGameStart()
